@@ -1,0 +1,216 @@
+/*mobile first*/
+html {
+    box-sizing: border-box;
+    font-size: 0.625em;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: #f8f8f8;
+    height: 100vh;
+  }
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  :focus {
+    outline-offset: 5px;
+  }
+  .button {
+    background: transparent;
+    border: 0.15rem solid #014d9f;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 0.25rem 0.75rem;
+  }
+  .button:hover {
+    background-color: #014d9f;
+    color: #fff;
+  }
+  .py-4 {
+    height: 100%;
+  }
+  #app {
+    display: grid;
+    height: 100%;
+    grid-template-rows: auto 1fr auto;
+  }
+  header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+  header a:hover {
+    color: #014d9f;
+  }
+  .skip-nav-link {
+    padding: 0.5rem;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+  }
+  .skip-nav-link:focus {
+    transform: translateY(0%);
+  }
+  h1 {
+    margin: 1rem 0 1rem 2rem;
+  }
+  h1 a {
+    color: #014d9f;
+  }
+  ul.linkscontainer {
+    display: flex;
+    margin: 1rem 0;
+  }
+  .linkscontainer a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
+  div.buttoncontainer {
+    margin: 1rem;
+  }
+  ul.bookcontainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  ul .book:hover {
+    transform: scale(1.01);
+  }
+  
+  main {
+    margin: 0 1.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin: 5rem auto;
+    text-align: center;
+  }
+  
+  .book {
+    box-shadow: 0.2rem 0.5rem 0.3rem 0 rgba(0, 0, 0, 0.5);
+    background-color: #cfedeb;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1rem;
+  }
+  
+  .book h3 {
+    border-bottom: 0.5px dotted #617d98;
+    flex: 1;
+    font-size: 1.5rem;
+    min-height: 4rem;
+  }
+  .book div {
+    flex: 2;
+  }
+  .book p {
+    font-size: 1rem;
+    margin: 1rem auto;
+  }
+  
+  footer {
+    background-color: #004d9f;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+    padding: 1rem;
+  }
+  footer h2 {
+    margin: 0;
+  }
+  h2 a {
+    color: #fff;
+  }
+  footer p {
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .error-message {
+    color: rgb(233, 5, 5);
+    font-size: 1.5rem;
+    height: 1.5rem;
+    margin: 2rem auto -2rem auto;
+    text-align: center;
+  }
+  .form {
+    background-color: #cfedeb;
+    box-shadow: 0.2rem 0.5rem 0.3rem 0 rgba(0, 0, 0, 0.5);
+    margin: 5rem auto;
+    min-width: 30rem;
+    padding: 2rem;
+    text-align: center;
+    width: 60vw;
+  }
+  .form label {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-style: italic;
+    padding: 1rem;
+    width: 8rem;
+  }
+  .form input {
+    margin: 1rem;
+    width: 80%;
+  }
+  .btngroup {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+  }
+  
+  /*input style*/
+  input[type="text"],
+  input[type="number"] {
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
+  ::placeholder {
+    color: #000;
+    opacity: 1;
+  }
+  input:focus::placeholder {
+    color: transparent;
+  }
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  @media (min-width: 36em) and (max-width: 62em) {
+    ul.bookcontainer {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 62.063em) {
+    ul.bookcontainer {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
